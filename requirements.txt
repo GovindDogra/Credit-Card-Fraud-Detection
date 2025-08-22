@@ -3,5 +3,5 @@ numpy
 pandas
 matplotlib
 seaborn
-scikit-learn==1.6.2
+scikit-learn==1.6.1
 joblib
