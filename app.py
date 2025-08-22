@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 
 # Load the logistic regression model and column transformer
-model_logistic = pickle.load(open('logistic_reg.pkl', 'rb'))
-col_transform = pickle.load(open('column_transformer.pkl', 'rb'))
+model_logistic = joblib.load("logistic_reg.pkl")
+col_transform = joblib.load("column_transformer.pkl")
 
 st.title("Credit Card Fraud Detection")
 
@@ -54,3 +54,4 @@ with st.container():
             # Display probabilities
             st.write(f"Probability of Legitimate Transaction: {y_prob[0]:.4f}")
             st.write(f"Probability of Fraudulent Transaction: {y_prob[1]:.4f}")
+
